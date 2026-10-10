@@ -14,14 +14,14 @@
 int main(int argc, char *argv[])
 {
     QGuiApplication app(argc, argv);
-    app.setApplicationName(QStringLiteral("redstone"));
-    app.setApplicationDisplayName(QStringLiteral("Redstone"));
-    app.setDesktopFileName(QStringLiteral("redstone"));
+    app.setApplicationName(QStringLiteral("omalaunch"));
+    app.setApplicationDisplayName(QStringLiteral("Omalaunch"));
+    app.setDesktopFileName(QStringLiteral("omalaunch"));
     app.setOrganizationName(QStringLiteral("Ben Brackenbury"));
     app.setOrganizationDomain(QStringLiteral("benbrackenbury.com"));
-    QIcon icon(QStringLiteral(":/redstone.png"));
+    QIcon icon(QStringLiteral(":/omalaunch.png"));
     if (icon.isNull())
-        icon = QIcon::fromTheme(QStringLiteral("redstone"));
+        icon = QIcon::fromTheme(QStringLiteral("omalaunch"));
     app.setWindowIcon(icon);
 
     QQuickStyle::setStyle(QStringLiteral("Material"));
@@ -55,7 +55,7 @@ int main(int argc, char *argv[])
     engine.rootContext()->setContextProperty(QStringLiteral("backend"), &backend);
     engine.load(QUrl(QStringLiteral("qrc:/Main.qml")));
     if (engine.rootObjects().isEmpty()) {
-        qCritical() << "Could not load Redstone UI; resource available:"
+        qCritical() << "Could not load Omalaunch UI; resource available:"
                     << QFile::exists(QStringLiteral(":/Main.qml"));
         return -1;
     }

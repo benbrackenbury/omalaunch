@@ -13,6 +13,6 @@
         <file alias="ShortcutHelp.qml">ShortcutHelp.qml</file>
         <file alias="KeyHints.qml">KeyHints.qml</file>
         <file alias="keys/Keymap.js">keys/Keymap.js</file>
-        <file alias="redstone.png">../../packaging/redstone.png</file>
+        <file alias="omalaunch.png">../../packaging/omalaunch.png</file>
     </qresource>
 </RCC>

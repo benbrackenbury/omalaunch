@@ -161,7 +161,7 @@ void Backend::refresh()
 
     QNetworkRequest request{QUrl(m_snapshotUrl)};
     request.setAttribute(QNetworkRequest::CacheLoadControlAttribute, QNetworkRequest::PreferNetwork);
-    request.setHeader(QNetworkRequest::UserAgentHeader, QStringLiteral("redstone-omarchy/0.1"));
+    request.setHeader(QNetworkRequest::UserAgentHeader, QStringLiteral("omalaunch/0.1"));
     request.setTransferTimeout(30000);
 
     auto *reply = m_nam.get(request);

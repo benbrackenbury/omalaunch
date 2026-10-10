@@ -12,7 +12,7 @@ ApplicationWindow {
     minimumWidth: 780
     minimumHeight: 520
     visible: true
-    title: "Redstone"
+    title: "Omalaunch"
 
     readonly property bool darkMode: backend.darkMode
     property int currentPage: 0
@@ -268,7 +268,7 @@ ApplicationWindow {
                     spacing: 6
 
                     Text {
-                        text: "Redstone"
+                        text: "Omalaunch"
                         color: backend.themeForeground
                         font.pixelSize: 20
                         font.bold: true

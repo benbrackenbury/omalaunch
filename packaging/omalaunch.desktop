@@ -1,11 +1,11 @@
 [Desktop Entry]
 Type=Application
-Name=Redstone
+Name=Omalaunch
 GenericName=SpaceX Launch Tracker
 Comment=Track SpaceX launches from redstone-server
-Exec=redstone
-Icon=redstone
+Exec=omalaunch
+Icon=omalaunch
 Terminal=false
 Categories=Network;News;
-Keywords=spacex;launch;starship;mission;
-StartupWMClass=redstone
+Keywords=spacex;launch;starship;mission;redstone;
+StartupWMClass=omalaunch

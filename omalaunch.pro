@@ -1,7 +1,7 @@
 QT += core gui network qml quick quickcontrols2 dbus
 
 CONFIG += c++17 release
-TARGET = redstone
+TARGET = omalaunch
 TEMPLATE = app
 
 HEADERS += \
@@ -21,9 +21,9 @@ RESOURCES += src/qml/resources.qrc
 
 target.path = /usr/bin
 desktop.path = /usr/share/applications
-desktop.files = packaging/redstone.desktop
+desktop.files = packaging/omalaunch.desktop
 icon.path = /usr/share/icons/hicolor/scalable/apps
-icon.files = packaging/redstone.svg
+icon.files = packaging/omalaunch.svg
 icon256.path = /usr/share/icons/hicolor/256x256/apps
-icon256.files = packaging/redstone.png
+icon256.files = packaging/omalaunch.png
 INSTALLS += target desktop icon icon256
