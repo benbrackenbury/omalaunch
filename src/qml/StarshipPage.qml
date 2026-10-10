@@ -3,6 +3,14 @@ import QtQuick.Controls
 import QtQuick.Layouts
 
 Item {
+    id: page
+    property alias view: listPage.view
+    function moveBy(delta) { listPage.moveBy(delta) }
+    function goEdge(last) { listPage.goEdge(last) }
+    function openCurrent() { listPage.openCurrent() }
+    function followCurrent() { listPage.followCurrent() }
+    function currentSlug() { return listPage.currentSlug() }
+
     ColumnLayout {
         anchors.fill: parent
         spacing: 12
@@ -79,6 +87,7 @@ Item {
         }
 
         MissionListPage {
+            id: listPage
             Layout.fillWidth: true
             Layout.fillHeight: true
             model: backend.starshipMissions

@@ -3,7 +3,10 @@ import QtQuick.Controls
 import QtQuick.Layouts
 
 Flickable {
+    id: page
     clip: true
+    property alias urlField: urlField
+    readonly property bool fieldFocused: urlField.activeFocus
     contentWidth: width
     contentHeight: column.implicitHeight
 
@@ -25,6 +28,7 @@ Flickable {
         }
 
         TextField {
+            id: urlField
             Layout.fillWidth: true
             text: backend.snapshotUrl
             color: backend.themeForeground

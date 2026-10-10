@@ -44,6 +44,7 @@ public:
     void setTypeFilter(const QString &type);
     void refreshStatus();
     const MissionRecord *bySlug(const QString &slug) const;
+    Q_INVOKABLE QString slugAt(int row) const;
 
 signals:
     void countChanged();

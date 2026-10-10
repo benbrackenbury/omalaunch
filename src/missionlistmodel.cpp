@@ -134,6 +134,13 @@ const MissionRecord *MissionListModel::bySlug(const QString &slug) const
     return nullptr;
 }
 
+QString MissionListModel::slugAt(int row) const
+{
+    if (row < 0 || row >= m_rows.size())
+        return {};
+    return m_source.at(m_rows.at(row).sourceIndex).slug;
+}
+
 QString MissionListModel::sectionFor(const MissionRecord &mission) const
 {
     if (m_kind != Kind::Search && m_followed.contains(mission.slug)

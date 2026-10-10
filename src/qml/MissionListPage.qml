@@ -7,6 +7,42 @@ Item {
     property var model: backend.missions
     property bool compact: false
     property bool showFilters: true
+    property alias view: list
+
+    function moveBy(delta) {
+        if (!list.count)
+            return
+        if (list.currentIndex < 0)
+            list.currentIndex = delta > 0 ? 0 : list.count - 1
+        else
+            list.currentIndex = Math.max(0, Math.min(list.count - 1, list.currentIndex + delta))
+        list.positionViewAtIndex(list.currentIndex, ListView.Contain)
+    }
+
+    function goEdge(last) {
+        if (!list.count)
+            return
+        list.currentIndex = last ? list.count - 1 : 0
+        list.positionViewAtIndex(list.currentIndex, last ? ListView.End : ListView.Beginning)
+    }
+
+    function currentSlug() {
+        if (!list.model || list.currentIndex < 0)
+            return ""
+        return list.model.slugAt(list.currentIndex)
+    }
+
+    function openCurrent() {
+        var slug = currentSlug()
+        if (slug.length)
+            backend.openMission(slug)
+    }
+
+    function followCurrent() {
+        var slug = currentSlug()
+        if (slug.length)
+            backend.toggleFollow(slug)
+    }
 
     ColumnLayout {
         anchors.fill: parent
@@ -71,6 +107,9 @@ Item {
             spacing: 8
             model: page.model
             boundsBehavior: Flickable.StopAtBounds
+            highlightFollowsCurrentItem: true
+            keyNavigationEnabled: false
+            currentIndex: 0
 
             section.property: "section"
             section.delegate: Text {
@@ -87,6 +126,7 @@ Item {
             delegate: MissionCard {
                 width: list.width
                 compact: page.compact
+                current: ListView.isCurrentItem
                 slug: model.slug
                 title: model.title
                 subtitle: model.subtitle

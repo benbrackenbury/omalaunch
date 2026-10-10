@@ -3,6 +3,17 @@ import QtQuick.Controls
 import QtQuick.Layouts
 
 Item {
+    id: page
+    property alias queryField: query
+    property alias view: listPage.view
+    readonly property bool fieldFocused: query.activeFocus
+
+    function moveBy(delta) { listPage.moveBy(delta) }
+    function goEdge(last) { listPage.goEdge(last) }
+    function openCurrent() { listPage.openCurrent() }
+    function followCurrent() { listPage.followCurrent() }
+    function currentSlug() { return listPage.currentSlug() }
+
     ColumnLayout {
         anchors.fill: parent
         spacing: 10
@@ -22,6 +33,7 @@ Item {
         }
 
         MissionListPage {
+            id: listPage
             Layout.fillWidth: true
             Layout.fillHeight: true
             model: backend.searchMissions

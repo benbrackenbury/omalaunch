@@ -9,5 +9,9 @@
         <file alias="SearchPage.qml">SearchPage.qml</file>
         <file alias="SettingsPage.qml">SettingsPage.qml</file>
         <file alias="OtherPage.qml">OtherPage.qml</file>
+        <file alias="KeyRouter.qml">KeyRouter.qml</file>
+        <file alias="ShortcutHelp.qml">ShortcutHelp.qml</file>
+        <file alias="KeyHints.qml">KeyHints.qml</file>
+        <file alias="keys/Keymap.js">keys/Keymap.js</file>
     </qresource>
 </RCC>

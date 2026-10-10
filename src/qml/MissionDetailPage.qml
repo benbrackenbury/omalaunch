@@ -11,6 +11,12 @@ Flickable {
 
     readonly property var mission: backend.selectedMission
 
+    function scrollBy(steps) {
+        var next = contentY + steps * 80
+        var max = Math.max(0, contentHeight - height)
+        contentY = Math.max(0, Math.min(max, next))
+    }
+
     ColumnLayout {
         id: column
         width: page.width

@@ -19,13 +19,14 @@ Rectangle {
     property bool isLive: false
     property bool followed: false
     property bool compact: false
+    property bool current: false
 
     width: ListView.view ? ListView.view.width : 400
     height: compact ? 88 : 118
     radius: 12
     color: backend.themeSurface
-    border.color: followed ? backend.themeAccent : "transparent"
-    border.width: followed ? 1 : 0
+    border.color: current || followed ? backend.themeAccent : "transparent"
+    border.width: current ? 2 : (followed ? 1 : 0)
 
     RowLayout {
         anchors.fill: parent
