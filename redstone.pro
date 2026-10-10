@@ -24,4 +24,6 @@ desktop.path = /usr/share/applications
 desktop.files = packaging/redstone.desktop
 icon.path = /usr/share/icons/hicolor/scalable/apps
 icon.files = packaging/redstone.svg
-INSTALLS += target desktop icon
+icon256.path = /usr/share/icons/hicolor/256x256/apps
+icon256.files = packaging/redstone.png
+INSTALLS += target desktop icon icon256

@@ -19,7 +19,10 @@ int main(int argc, char *argv[])
     app.setDesktopFileName(QStringLiteral("redstone"));
     app.setOrganizationName(QStringLiteral("Ben Brackenbury"));
     app.setOrganizationDomain(QStringLiteral("benbrackenbury.com"));
-    app.setWindowIcon(QIcon::fromTheme(QStringLiteral("redstone")));
+    QIcon icon(QStringLiteral(":/redstone.png"));
+    if (icon.isNull())
+        icon = QIcon::fromTheme(QStringLiteral("redstone"));
+    app.setWindowIcon(icon);
 
     QQuickStyle::setStyle(QStringLiteral("Material"));
 
