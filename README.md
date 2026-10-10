@@ -4,6 +4,8 @@ SpaceX launches on the Linux desktop. Omalaunch is a Qt Quick client for [Omarch
 
 It follows the current Omarchy theme (including live switches) and is meant to be driven from the keyboard, in the same spirit as omacalc and omamail.
 
+![Omalaunch mission list](docs/screenshot.jpg)
+
 ## What it shows
 
 Upcoming, in-progress, and past SpaceX missions from redstone-server. Follow a launch, open the webcast or the SpaceX page, and (when SpaceX is flying Starship) poll the public tracker for vehicle telemetry. Stats and Starbase road closures live on their own pages. Non-SpaceX launches can be turned on in settings.
