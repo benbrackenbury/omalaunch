@@ -1,0 +1,11 @@
+[Desktop Entry]
+Type=Application
+Name=Redstone
+GenericName=SpaceX Launch Tracker
+Comment=Track SpaceX launches from redstone-server
+Exec=redstone
+Icon=redstone
+Terminal=false
+Categories=Network;News;
+Keywords=spacex;launch;starship;mission;
+StartupWMClass=redstone

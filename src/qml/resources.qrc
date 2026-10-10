@@ -1,0 +1,13 @@
+<RCC>
+    <qresource prefix="/">
+        <file alias="Main.qml">Main.qml</file>
+        <file alias="MissionCard.qml">MissionCard.qml</file>
+        <file alias="MissionListPage.qml">MissionListPage.qml</file>
+        <file alias="MissionDetailPage.qml">MissionDetailPage.qml</file>
+        <file alias="StatsPage.qml">StatsPage.qml</file>
+        <file alias="StarshipPage.qml">StarshipPage.qml</file>
+        <file alias="SearchPage.qml">SearchPage.qml</file>
+        <file alias="SettingsPage.qml">SettingsPage.qml</file>
+        <file alias="OtherPage.qml">OtherPage.qml</file>
+    </qresource>
+</RCC>

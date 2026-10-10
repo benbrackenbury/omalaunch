@@ -1,0 +1,6 @@
+/build/
+*.user
+*.AppImage
+.qml*
+*.qmlc
+*.jsc
